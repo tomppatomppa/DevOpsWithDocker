@@ -1,0 +1,13 @@
+$ docker run -it devopsdockeruh/simple-web-service:ubuntu
+
+$ docker exec -it romantic_panini bash
+root@0ad5a80909ef:/usr/src/app# tail -f ./text.log
+
+2023-08-31 11:57:28 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-08-31 11:57:30 +0000 UTC
+2023-08-31 11:57:32 +0000 UTC
+2023-08-31 11:57:34 +0000 UTC
+2023-08-31 11:57:36 +0000 UTC
+2023-08-31 11:57:38 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
