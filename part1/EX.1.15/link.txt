@@ -1,3 +1,3 @@
-https://hub.docker.com/r/tomi12345/devops-docker-course
+https://hub.docker.com/r/tomi12345/devops-docker-project
 
 README in the repository overview section
