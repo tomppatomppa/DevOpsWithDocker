@@ -1,3 +1,6 @@
+./EX.2.6-2.10/example-frontend
+./EX.2.6-2.10/example-backend
+
 whoami
 docker-compose.yml
 Dockerfile
