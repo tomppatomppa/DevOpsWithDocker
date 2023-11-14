@@ -1,0 +1,5 @@
+Changes in frontend Dockerfile
+#Remove port and add /api
+ENV REACT_APP_BACKEND_URL="http://localhost/api" 
+
+
