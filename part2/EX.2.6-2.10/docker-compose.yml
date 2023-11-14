@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  example-frontend:
+    build:
+      context: ./example-frontend
+    ports:
+      - 5000:5000
+
+  example-backend:
+    build:
+      context: ./example-backend
+    ports:
+      - 8080:8080
+    environment:
+      REDIS_HOST: redis
+      POSTGRES_HOST: postgres
+      POSTGRES_PASSWORD: example
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: postgres
+
+  redmine:
+    image: redmine:4.1-alpine
+    environment:
+      - REDMINE_DB_POSTGRES=db
+      - REDMINE_DB_PASSWORD=example
+    ports:
+      - 9999:3000
+    depends_on:
+      - db
+
+  adminer:
+    image: adminer:4
+    restart: always
+    environment:
+      - ADMINER_DESIGN=galkaev
+    ports:
+      - 8083:8080
+
+volumes:
+  files:
