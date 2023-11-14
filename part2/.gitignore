@@ -1,5 +1,6 @@
 ./EX.2.6-2.10/example-frontend
 ./EX.2.6-2.10/example-backend
+./EX.2.6-2.10/database
 
 whoami
 #docker-compose.yml
