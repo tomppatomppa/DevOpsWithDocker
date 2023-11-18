@@ -13,3 +13,5 @@ ENV REQUEST_ORIGIN=http://localhost:4200
 COPY . /usr/src/app/
 
 EXPOSE 8000
+
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
