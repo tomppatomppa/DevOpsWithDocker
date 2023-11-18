@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 export type User = {
   email: string;
@@ -14,7 +13,7 @@ export type User = {
 export class ApiService {
   apiUrl = 'http://localhost/api';
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   async getUsers(): Promise<User[]> {
     console.log('fetch users');
