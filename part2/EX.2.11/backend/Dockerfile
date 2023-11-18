@@ -14,4 +14,6 @@ COPY . /usr/src/app/
 
 EXPOSE 8000
 
+RUN chmod +x entrypoint.sh
+
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
