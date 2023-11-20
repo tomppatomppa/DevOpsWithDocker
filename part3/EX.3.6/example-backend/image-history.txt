@@ -1,0 +1,13 @@
+# Before
+2c71780ca589   About an hour ago   CMD ["./server"]                                0B        buildkit.dockerfile.v0
+<missing>      About an hour ago   USER appuser                                    0B        buildkit.dockerfile.v0
+<missing>      About an hour ago   RUN /bin/sh -c adduser appuser # buildkit       334kB     buildkit.dockerfile.v0
+<missing>      About an hour ago   ENV PORT=8080                                   0B        buildkit.dockerfile.v0
+<missing>      About an hour ago   RUN /bin/sh -c go build . # buildkit            146MB     buildkit.dockerfile.v0
+
+
+# After
+661011542103   About a minute ago   CMD ["./server"]                                0B        buildkit.dockerfile.v0
+<missing>      About a minute ago   USER appuser                                    0B        buildkit.dockerfile.v0
+<missing>      About a minute ago   ENV PORT=8080                                   0B        buildkit.dockerfile.v0
+<missing>      About a minute ago   RUN /bin/sh -c go build . &&     useradd -m …   146MB     buildkit.dockerfile.v0

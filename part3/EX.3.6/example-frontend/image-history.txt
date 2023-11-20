@@ -1,0 +1,14 @@
+# Before optimizing image
+ba866abaaa60   38 seconds ago   CMD ["serve" "-s" "-l" "5000" "build"]          0B        buildkit.dockerfile.v0
+<missing>      38 seconds ago   USER nonroot                                    0B        buildkit.dockerfile.v0
+<missing>      38 seconds ago   RUN /bin/sh -c useradd -m nonroot # buildkit    334kB     buildkit.dockerfile.v0
+<missing>      39 seconds ago   RUN /bin/sh -c npm install -g serve # buildk…   6.39MB    buildkit.dockerfile.v0
+<missing>      49 seconds ago   RUN /bin/sh -c npm install && npm run build …   352MB     buildkit.dockerfile.v0
+
+
+# After optimizing image
+4d33b4c46535   16 seconds ago   CMD ["serve" "-s" "-l" "5000" "build"]          0B        buildkit.dockerfile.v0
+<missing>      16 seconds ago   USER nonroot                                    0B        buildkit.dockerfile.v0
+<missing>      16 seconds ago   RUN /bin/sh -c useradd -m nonroot # buildkit    334kB     buildkit.dockerfile.v0
+<missing>      16 seconds ago   RUN /bin/sh -c npm install -g serve # buildk…   6.39MB    buildkit.dockerfile.v0
+<missing>      22 seconds ago   RUN /bin/sh -c npm install && npm run build …   168MB     buildkit.dockerfile.v0
