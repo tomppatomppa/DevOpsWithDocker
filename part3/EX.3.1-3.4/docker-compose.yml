@@ -1,6 +1,12 @@
 version: '3.8'
 
 services:
+  express-app:
+    image: tomi12345/express-app:latest
+    ports:
+      - 8080:8080
+    container_name: express-app
+
   watchtower:
     image: containrrr/watchtower
     environment:
@@ -8,4 +14,4 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
-    command: --cleanup tomi12345/express-app:latest
+    command: --cleanup express-app
