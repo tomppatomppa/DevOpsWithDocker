@@ -1,0 +1,5 @@
+EX.3.5/example-backend/*
+!EX.3.5/example-backend/Dockerfile
+
+EX.3.5/example-frontend/*
+!EX.3.5/example-frontend/Dockerfile
