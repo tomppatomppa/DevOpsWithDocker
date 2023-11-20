@@ -8,5 +8,4 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
-    labels:
-      - com.centurylinklabs.watchtower.enable="true"
+    command: --cleanup tomi12345/express-app:latest
