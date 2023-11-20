@@ -1,0 +1,1 @@
+docker run -e DOCKER_USER=<USERNAME> -e DOCKER_PWD=<PASSWORD> -v /var/run/docker.sock:/var/run/docker.sock <IMAGE-NAME> mluukkai/express_app tomi12345/testing2
